@@ -1,0 +1,322 @@
+/* Grid Framework */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1em;
+  margin: 0;
+}
+
+.grid, .row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.row {
+  margin-bottom: 1em;
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+[class*="col"] {
+  float: left;
+  margin-right: 1.5%;
+}
+
+[class*="col"]:last-of-type {
+  margin-right: 0;
+}
+
+.one-col {
+  width: 6.958%;
+}
+
+.two-col {
+  width: 15.41%;
+}
+
+.three-col {
+  width: 23.87%;
+}
+
+.four-col {
+  width: 32.33%;
+}
+
+.five-col {
+  width: 40.79%;
+}
+
+.six-col {
+  width: 49.25%;
+}
+
+.seven-col {
+  width: 57.70%;
+}
+
+.eight-col {
+  width: 66.16%;
+}
+
+.nine-col {
+  width: 74.62%;
+}
+
+.ten-col {
+  width: 83.08%;
+}
+
+.eleven-col {
+  width: 91.54%;
+}
+
+.twelve-col {
+  width: 100%;
+}
+
+.one-offset {
+  margin-left: 8.458%;
+}
+
+.two-offset {
+  margin-left: 16.91%;
+}
+
+.three-offset {
+  margin-left: 25.37%;
+}
+
+.four-offset {
+  margin-left: 33.83%;
+}
+
+.five-offset {
+  margin-left: 42.29%;
+}
+
+.six-offset {
+  margin-left: 50.75%;
+}
+
+.seven-offset {
+  margin-left: 59.20%;
+}
+
+.eight-offset {
+  margin-left: 67.66%;
+}
+
+.nine-offset {
+  margin-left: 76.12%;
+}
+
+.ten-offset {
+  margin-left: 84.58%;
+}
+
+.eleven-offset {
+  margin-left: 91.54%;
+}
+
+@media all and (max-width: 768px) {
+  [class*="offset"] {
+    margin-left: 0;
+  }
+  [class*="col"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .row {
+    margin: 0;
+  }
+}
+
+/* Visual Styles */
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  background: darken(rgba(95,118,133,1), 10%);
+}
+
+.right {
+  float: right;
+}
+
+.top-bar {
+  background-color: rgba(95,118,133,1);
+  height: 3em;
+}
+
+.top-bar .logo {
+  margin: 0.25em;
+}
+
+.logo {
+  display: inline-block;
+  color: white;
+  font-family: Georgia;
+  font-size: 2em;
+  &:before {
+    content: "\e010";
+  }
+}
+
+.main-nav li {
+  list-style-type: none;
+  color: white
+}
+
+.main-nav li:last-of-type {
+  margin-right: .5em;
+}
+
+.main-background {
+  margin-top: 5em;
+}
+
+.sidebar-container {
+  background-color: #2A2A2A;
+}
+
+.sidebar-header {
+  background-color: #ffeb00;
+  padding: 1.5em;
+}
+
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.sidebar-header details {
+  font-size: 0.75em;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.sidebar-header details summary::-webkit-details-marker { 
+  display:none; 
+}
+
+.author {
+  text-decoration: none;
+  color: #6d98a8;
+}
+
+.author:hover {
+  text-decoration: underline;
+}
+
+.sidebar-nav {
+  color: #AAA;
+}
+
+.sidebar-nav-control {
+  background-color: #222;
+  font-size: .75em;
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 4px;
+}
+
+.sidebar-nav-control:hover {
+  color: #FFF;
+}
+
+.up {
+  &:before {
+    content: "\25b2";
+  }
+}
+
+.down {
+  &:before {
+    content: "\25bc";
+  }
+}
+
+.sidebar-nav li {
+  margin: 1.5em 0;
+}
+
+.sidebar-nav li:before {
+  color: #ddd;
+}
+
+.sidebar-nav .selected {
+  color: #FFEB00;
+}
+
+.content-header {
+  position: relative;
+  background-color: #ffeb00;
+  
+  &:before {
+    position: absolute;
+    top: 0.25em;
+    content: "\2329";
+    display: inline-block;
+  }
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 0.25em;
+    content: "\232a";
+  }
+}
+
+.content-header h1 {
+  margin: 0;
+  color: #888;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: .8em;
+  padding: 0.5em 0;
+}
+
+.content-container {
+  background-color: white;
+  color: #666;
+}
+
+.content-body {
+  padding: 6em;
+}
+
+.content-body h1 {
+  font-size: 1.5em;
+  color: #444;
+}
+
+.content-body p {
+  font-size: .9em;
+  line-height: 1.7em;
+}
+
+.content-footer {
+  text-align: center;
+  border-top: solid 1px #AAA;
+}
+
+.content-footer p {
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 768px) {
+  .sidebar-container {
+    position: static;
+  }
+}
